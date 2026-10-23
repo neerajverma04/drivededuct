@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – DriveDeduct: Mileage & Taxes</title>
+  <link rel="icon" type="image/png" href="images/icon-512.png" />
+  <style>
+    :root {
+      --bg: #090e1a;
+      --surface: #111a2e;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.8; text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .logo-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2);
+    }
+    h1 { font-size: 2rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+    .effective { 
+      display: inline-block;
+      background: var(--surface); 
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+    section { margin-bottom: 2.5rem; }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 1rem;
+      padding-left: 0.75rem;
+      border-left: 3px solid var(--accent);
+    }
+    p { margin-bottom: 0.875rem; color: var(--text); }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.875rem;
+    }
+    ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      position: relative;
+      color: var(--text);
+    }
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .permission-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .permission-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+    .permission-card p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    .highlight-box {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p { margin: 0; color: #bae6fd; font-size: 0.95rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a href="index.html" class="back-link">
+        <span>← Back to DriveDeduct Home</span>
+      </a>
+      <span style="font-size: 0.85rem; color: var(--muted);">Official Compliance Document</span>
+    </div>
+
+    <header>
+      <div class="logo">
+        <img src="images/icon-512.png" alt="DriveDeduct Logo" class="logo-img" onerror="this.src='logo.png'" />
+        <div>
+          <h1>DriveDeduct: Mileage & Taxes</h1>
+          <p class="subtitle">Official Privacy Policy & Data Disclosure</p>
+        </div>
+      </div>
+      <span class="effective">Effective Date: September 20, 2026</span>
+    </header>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to <strong>DriveDeduct: Mileage & Taxes</strong>, developed by <strong>Neeraj Verma</strong>
+        ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains
+        how we collect, use, and safeguard your information when you use our Android and iOS applications.
+      </p>
+      <p>
+        DriveDeduct is designed for gig workers, delivery drivers, rideshare drivers, and self-employed
+        individuals who need to track business mileage for tax deductions (IRS, CRA, HMRC, ATO, etc.).
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>Core Principle:</strong> DriveDeduct is built with a 100% privacy-first approach. All core
+          tracking and receipt scanning features work <strong>completely on-device</strong>. Your trip routes,
+          dollar amounts, and receipt photos never pass through any central tracking server. Your data
+          never leaves your device unless you explicitly connect your personal Google Drive, Dropbox, or OneDrive.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Information We Collect</h2>
+
+      <h3 style="color:#f8fafc; font-size:1.05rem; margin:1.25rem 0 0.5rem;">2a. Data You Provide</h3>
+      <ul>
+        <li>Trip notes, vehicle information, and mileage logs you manually enter</li>
+        <li>Receipt images you scan within the app for fuel, maintenance, or business expenses</li>
+        <li>Cloud account credentials (Dropbox, Google Drive, OneDrive) for optional backup & sync — only if you explicitly authorize them via OAuth 2.0</li>
+      </ul>
+
+      <h3 style="color:#f8fafc; font-size:1.05rem; margin:1.25rem 0 0.5rem;">2b. Data Collected Automatically</h3>
+      <ul>
+        <li>GPS coordinates while the tracking foreground service is active (for trip route calculation and deadhead mile detection)</li>
+        <li>Start and stop timestamps of trips</li>
+        <li>Distance calculations and speed telemetry derived solely from on-device GPS data</li>
+      </ul>
+
+      <h3 style="color:#f8fafc; font-size:1.05rem; margin:1.25rem 0 0.5rem;">2c. Data We Do NOT Collect</h3>
+      <ul>
+        <li>We do NOT collect user identity, contacts, or behavioral advertising identifiers</li>
+        <li>We do NOT track you across third-party apps or websites</li>
+        <li>We do NOT sell, lease, or monetize your data to data brokers or advertisers — ever</li>
+        <li>We do NOT have access to files in your cloud storage accounts beyond the isolated DriveDeduct folder you authorize</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Device Permissions & Why We Use Them</h2>
+
+      <div class="permission-card">
+        <h3>📍 Location (Fine, Coarse & Background Location)</h3>
+        <p>
+          Required for automatic GPS drive tracking. Fine location captures precise route data needed for audit-proof
+          logbooks. Background location is used so tracking continues smoothly while the app is minimized, in standby, or
+          running your GPS navigation app (Google Maps, Waze). You can stop tracking at any time directly from the
+          persistent notification or within the app.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>📷 Camera & Photo Library Access</h3>
+        <p>
+          Used exclusively for the smart receipt scanner powered by Google ML Kit OCR. All text recognition is performed
+          <strong>100% on-device</strong> — receipt photos are never uploaded to any remote OCR server.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔔 Notifications</h3>
+        <p>
+          Used to display a persistent notification while GPS tracking is active (required by Android for foreground
+          services), giving you real-time distance, speed, and 1-tap stop controls.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔵 Bluetooth (Nearby Devices)</h3>
+        <p>
+          Optional. Used to detect connection or disconnection from your car's Bluetooth audio or OBD-II adapter to
+          automatically start and stop trip tracking without needing to touch your phone. Bluetooth telemetry is never
+          shared or transmitted off-device.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔄 Boot Receiver (Auto-resume)</h3>
+        <p>
+          Allows an interrupted drive tracking session to cleanly resume after an unexpected device restart, ensuring
+          no deductible miles are lost.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🌐 Internet & Network State</h3>
+        <p>
+          Used only when you choose to sync your encrypted backups to Google Drive, Dropbox, or Microsoft OneDrive, or
+          fetch currency/tax rates. The entire app is fully functional offline without an active internet connection.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔋 Battery Optimization Exemption</h3>
+        <p>
+          DriveDeduct may request exemption from aggressive OS battery killers so Android does not terminate GPS tracking
+          in the middle of a trip. The app incorporates dynamic distance filtering and stationary sleep to minimize power draw.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. How We Use Your Information</h2>
+      <ul>
+        <li>To calculate accurate trip mileage and compute deductible tax savings for IRS, CRA, HMRC, and ATO returns</li>
+        <li>To extract total amounts, tax lines, and merchant names from receipt photos using on-device OCR</li>
+        <li>To calculate the difference between platform-reported miles and actual business miles (Discrepancy Auditor)</li>
+        <li>To sync encrypted backups to your personally linked cloud storage provider</li>
+        <li>To generate tamper-resistant PDF and CSV audit logs for tax authorities and platform disputes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Cloud Storage & Third-Party Services</h2>
+      <p>
+        DriveDeduct optionally integrates with the following cloud storage platforms for backup and restore. All sync is
+        strictly opt-in and client-side:
+      </p>
+      <ul>
+        <li><strong>Google Drive</strong> — governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><strong>Dropbox</strong> — governed by <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox Privacy Policy</a></li>
+        <li><strong>Microsoft OneDrive</strong> — governed by <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a></li>
+      </ul>
+      <p>
+        We only access the isolated <code>DriveDeduct</code> application folder you authorize via official OAuth 2.0 PKCE flow. We never receive or store your passwords.
+      </p>
+
+      <h3 style="color:#f8fafc; font-size:1.05rem; margin:1.25rem 0 0.5rem;">Google ML Kit Text Recognition</h3>
+      <p>
+        Receipt OCR operates entirely on your device via Google ML Kit. No receipt data or photos are transmitted to Google.
+        See <a href="https://developers.google.com/ml-kit/privacy" target="_blank" rel="noopener">ML Kit Privacy disclosure</a>.
+      </p>
+
+      <h3 style="color:#f8fafc; font-size:1.05rem; margin:1.25rem 0 0.5rem;">Google Play Billing & RevenueCat</h3>
+      <p>
+        Subscriptions and in-app purchases are handled securely through Google Play Billing. Payment credentials and card numbers
+        are processed exclusively by Google and never touch our code.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Subscriptions & Billing</h2>
+      <p>DriveDeduct provides transparent pricing options:</p>
+      <ul>
+        <li><strong>Lifetime Founder Access</strong> — $99.99 one-time non-consumable (first 500 drivers only), includes 14-day free trial</li>
+        <li><strong>Pro Monthly</strong> — $4.99/month, includes 14-day free trial</li>
+        <li><strong>Pro Annual</strong> — $49.99/year (best value for full-time drivers)</li>
+      </ul>
+      <p>
+        Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing cycle.
+        You can easily manage or cancel anytime directly in your Google Play Store Subscriptions menu.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Data Storage & Security</h2>
+      <p>
+        Your mileage logs, inspection records, and receipt photos are stored in secure, private device storage. Cloud backups
+        are encrypted using client-side AES-GCM encryption before leaving the device.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Data Retention & Deletion</h2>
+      <p>
+        You hold 100% ownership and control over your records. You can delete individual drives, purge receipt archives, or
+        wipe all application data instantly from the Settings menu. Uninstalling the app permanently purges all local data.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Children's Privacy</h2>
+      <p>
+        DriveDeduct is intended for professional use by adults (18+) operating commercial or rideshare vehicles. We do not
+        knowingly collect or solicit information from anyone under the age of 13.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Your Rights (GDPR, CCPA & Global)</h2>
+      <p>Depending on your jurisdiction, you have full rights to:</p>
+      <ul>
+        <li><strong>Access & Portability:</strong> Export complete trip history and receipt attachments at any time in open CSV and PDF formats</li>
+        <li><strong>Erasure:</strong> Permanently delete all logs and local databases directly within the app</li>
+        <li><strong>Opt-Out:</strong> Stop automatic Bluetooth tracking, cloud backups, or location permissions at any time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>11. Contact Us</h2>
+      <p>If you have questions, feedback, or compliance inquiries regarding this Privacy Policy or your data:</p>
+      <ul>
+        <li><strong>Developer:</strong> Neeraj Verma</li>
+        <li><strong>Email:</strong> <a href="mailto:neerajverma04@gmail.com">neerajverma04@gmail.com</a></li>
+        <li><strong>Application:</strong> DriveDeduct: Mileage & Taxes</li>
+        <li><strong>Response Time:</strong> We aim to reply within 48 hours</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Neeraj Verma &bull; DriveDeduct: Mileage & Taxes &bull; All rights reserved.</p>
+      <p style="margin-top:0.5rem;"><a href="index.html">DriveDeduct Home</a> &bull; <a href="#top">Back to Top</a></p>
+    </footer>
+  </div>
+</body>
+</html>
