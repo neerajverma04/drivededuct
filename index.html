@@ -509,32 +509,16 @@
           <button onclick="setSlide(4)" id="dot-4" aria-label="Slide 4" class="w-2.5 h-2.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer"></button>
           <button onclick="setSlide(5)" id="dot-5" aria-label="Slide 5" class="w-2.5 h-2.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer"></button>
         </div>
-      </div>
 
-      <!-- Horizontal Thumbnails Strip -->
-      <div class="mt-12 pt-8 border-t border-white/5">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 text-center mb-4">Click Any Card to Inspect in High Resolution:</div>
-        <div class="flex items-center justify-start sm:justify-center gap-4 overflow-x-auto pb-4 px-2 snap-x">
-          <div onclick="setSlide(1)" class="snap-center shrink-0 w-36 sm:w-44 rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-sky-400 transition-all cursor-pointer hover:scale-105 p-1">
-            <img src="images/screenshot_1.png" alt="Auto GPS Tracking" class="w-full h-auto rounded-xl object-cover" />
-            <div class="text-[11px] font-bold text-center text-slate-300 py-1.5">1. Auto Tracking</div>
+        <!-- Dynamic Slide Feature Card -->
+        <div id="showcaseCaption" class="mt-8 text-center max-w-lg mx-auto glass-panel p-5 rounded-2xl border border-white/10 shadow-lg">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span id="captionBadge" class="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 border border-sky-500/30">Auto GPS Tracking</span>
           </div>
-          <div onclick="setSlide(2)" class="snap-center shrink-0 w-36 sm:w-44 rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-sky-400 transition-all cursor-pointer hover:scale-105 p-1">
-            <img src="images/screenshot_2.png" alt="IRS & CRA Tax Rules" class="w-full h-auto rounded-xl object-cover" />
-            <div class="text-[11px] font-bold text-center text-slate-300 py-1.5">2. Tax Rules</div>
-          </div>
-          <div onclick="setSlide(3)" class="snap-center shrink-0 w-36 sm:w-44 rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-sky-400 transition-all cursor-pointer hover:scale-105 p-1">
-            <img src="images/screenshot_3.png" alt="Shift Classification" class="w-full h-auto rounded-xl object-cover" />
-            <div class="text-[11px] font-bold text-center text-slate-300 py-1.5">3. Shift Tagging</div>
-          </div>
-          <div onclick="setSlide(4)" class="snap-center shrink-0 w-36 sm:w-44 rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-sky-400 transition-all cursor-pointer hover:scale-105 p-1">
-            <img src="images/screenshot_4.png" alt="Founder Lifetime Deal" class="w-full h-auto rounded-xl object-cover" />
-            <div class="text-[11px] font-bold text-center text-slate-300 py-1.5">4. Founder Deal</div>
-          </div>
-          <div onclick="setSlide(5)" class="snap-center shrink-0 w-36 sm:w-44 rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-sky-400 transition-all cursor-pointer hover:scale-105 p-1">
-            <img src="images/screenshot_5.png" alt="On-Device Privacy" class="w-full h-auto rounded-xl object-cover" />
-            <div class="text-[11px] font-bold text-center text-slate-300 py-1.5">5. Zero Battery</div>
-          </div>
+          <h3 id="captionHeading" class="text-lg font-bold text-white">Hands-Free Bluetooth Drive Detection</h3>
+          <p id="captionDesc" class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            Pairs silently with your vehicle audio or OBD-II. Tracking starts when you drive and logs deadhead miles automatically without draining battery.
+          </p>
         </div>
       </div>
     </section>
@@ -810,6 +794,39 @@
     let currentSlide = 1;
     const totalSlides = 5;
 
+    const slideData = [
+      {
+        badge: "Auto GPS Tracking",
+        badgeClass: "bg-sky-500/20 text-sky-400 border-sky-500/30",
+        heading: "Hands-Free Bluetooth Drive Detection",
+        desc: "Pairs silently with your vehicle audio or OBD-II. Tracking starts when you drive and logs deadhead miles automatically without draining battery."
+      },
+      {
+        badge: "Tax Intelligence",
+        badgeClass: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+        heading: "IRS & CRA Standard Mileage Rules",
+        desc: "Built-in 2026 deduction rates for USA (Form 1040 Schedule C) and Canada (CRA T2125). Automatically calculates deductible sums in real-time."
+      },
+      {
+        badge: "Shift Tagging",
+        badgeClass: "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
+        heading: "Multi-App Shift & Delivery Tagging",
+        desc: "Categorize business vs personal drives with one swipe. Easily tag shifts across Uber, Lyft, DoorDash, and Instacart."
+      },
+      {
+        badge: "Founder Lifetime",
+        badgeClass: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+        heading: "Pay Once. Save On Taxes Forever.",
+        desc: "No monthly recurring charges. Lifetime access includes all future tax form engines, receipt OCR updates, and cloud sync."
+      },
+      {
+        badge: "Total Privacy",
+        badgeClass: "bg-purple-500/20 text-purple-400 border-purple-500/30",
+        heading: "100% On-Device & Zero Battery Drain",
+        desc: "Zero tracking servers. Encrypted backups sync directly to your personal Google Drive or Dropbox with zero telemetry."
+      }
+    ];
+
     function setSlide(n) {
       currentSlide = n;
       const img = document.getElementById('mainShowcaseImg');
@@ -839,6 +856,20 @@
             dot.className = "w-2.5 h-2.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer";
           }
         }
+      }
+
+      // Update caption
+      const info = slideData[n - 1];
+      if (info) {
+        const badgeEl = document.getElementById('captionBadge');
+        const headingEl = document.getElementById('captionHeading');
+        const descEl = document.getElementById('captionDesc');
+        if (badgeEl) {
+          badgeEl.className = "text-xs font-extrabold uppercase px-3 py-1 rounded-full border " + info.badgeClass;
+          badgeEl.textContent = info.badge;
+        }
+        if (headingEl) headingEl.textContent = info.heading;
+        if (descEl) descEl.textContent = info.desc;
       }
     }
 
